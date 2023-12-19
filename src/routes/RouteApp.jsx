@@ -1,11 +1,13 @@
 import React from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
+import LoginPage from '../pages/AuthPages/login_page';
 
 const RouteApp = () => {
         return (
                 <Routes>
-                        //! when create login and signUp page only Uncomment this statments and import
+                      
                         {/* <Route path="/login" element={<LoginPage />} /> */}
+                        <Route index element={<LoginPage />} />
                         {/* <Route path="/signUp" element={<SignUpPage />} /> */}
 
                         {/* <Route path="/home" element={<HomePage />} /> */}
