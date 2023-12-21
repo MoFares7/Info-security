@@ -1,6 +1,6 @@
 
 import React from 'react'
-import { Grid,Paper, Avatar, TextField, Button, Typography } from '@mui/material'
+import { Grid,Paper, Avatar, TextField, Button, Typography , Link } from '@mui/material'
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
 const Login=()=>{
@@ -17,25 +17,14 @@ const Login=()=>{
                 </Grid>
                 <TextField style={textStyle} label='Username' placeholder='Enter username' variant="outlined" fullWidth required />
                 <TextField style={textStyle} label='Password' placeholder='Enter password' type='password' variant="outlined" fullWidth required/>
-                <FormControlLabel
-                    control={
-                    <Checkbox
-                        name="checkedB"
-                        color="primary"
-                    />
-                    }
-                    label="Remember me"
-                 />
+            
                 <Button type='submit' color='primary' variant="contained" style={btnstyle} fullWidth>Sign in</Button>
+
                 <Typography >
-                     {/* <Link href="#" >
-                        Forgot password ?
-                </Link> */}
-                </Typography>
-                <Typography > Do you have an account ?
-                     {/* <Link href="#" >
+                     Do you have an account ?
+                     <Link href="/signUp" >
                         Sign Up 
-                </Link> */}
+                </Link>
                 </Typography>
                 </div>
     )

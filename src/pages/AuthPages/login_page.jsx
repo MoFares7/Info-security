@@ -16,7 +16,7 @@ function LoginPage() {
           minHeight: "100%",
           backgroundSize: "cover",
           backgroundColor: "#1bbd7e",
-          padding: 20,
+          padding:20,
         }}
       >
         <Grid
@@ -25,7 +25,7 @@ function LoginPage() {
           direction="row"
           elevation={10}
           sx={{
-            padding: 10,
+            padding: 11,
           }}
         >
           <Grid item xs={5}>
