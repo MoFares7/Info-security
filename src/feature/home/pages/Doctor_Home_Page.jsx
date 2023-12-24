@@ -8,10 +8,8 @@ import StudentTable from '../components/StudentsTable';
 const DoctorHomePage = () => {
   const [students, setStudents] = useState([
     { id: 1, name: 'محمد فارس الدباس', degree: '' },
-    { id: 2, name: 'علاء زامل', degree: '' },
-    { id: 3, name: 'مرام منصور', degree: '' },
-    { id: 4, name: 'شام الدباس', degree: '' },
-    { id: 5, name: 'ابو عبدو', degree: '' },
+    { id: 2, name: 'شام الدباس', degree: '' },
+ 
   ]);
 
   const [material, setMaterial] = useState('');

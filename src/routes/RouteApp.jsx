@@ -10,7 +10,7 @@ const RouteApp = () => {
                         {/* <Route index element={<LoginPage />} />
                         <Route path="/signUp" element={<SignUpPage />} /> */}
 
-                        {/* <Route path="/" element={<StudentHomePage />} /> */}
+                        <Route path="/student" element={<StudentHomePage />} />
                         <Route path="/" element={<DoctorHomePage />} />
                 </Routes>
 

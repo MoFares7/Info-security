@@ -1,6 +1,5 @@
 import { Box, Typography } from '@mui/material'
 import React from 'react'
-import MainButton from '../components/MainButton'
 import student from '../../../assets/images/student.svg';
 import HeaderSection from '../components/HeaderSection';
 import DummeyMarks from './../components/dummyDataMarks';
@@ -46,11 +45,11 @@ const StudentHomePage = () => {
                                 </Box>
                                 <DummeyMarks />
 
-                                <MainButton
+                                {/* <MainButton
                                         title={'استعلام عن علاماتي'}
                                         width='200px'
                                         backgroundColor='#6C63FF'
-                                />
+                                /> */}
                         </Box>
                         <Box sx={{
                                 p: 10,
