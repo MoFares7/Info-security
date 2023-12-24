@@ -28,10 +28,21 @@ const DoctorHomePage = () => {
         )
       );
     } else {
-      console.log('Invalid degree input');
+      console.log('القيمة المدخلة خاطئة');
     }
   };
 
+  const handleMaterialChange = (value) => {
+    // Validation logic: Add your desired validation for the material
+    // For example, you can check if the material is not empty
+    const isValidMaterial = value.trim() !== '';
+
+    if (isValidMaterial || value === '') {
+      setMaterial(value);
+    } else {
+      console.log('القيمة المدخلة خاطئة');
+    }
+  };
 
   const checkTableValidations = () => {
     const hasInvalidDegree = students.some((student) => !student.isValidDegree);
@@ -41,12 +52,13 @@ const DoctorHomePage = () => {
   const handleMainButtonClick = () => {
     const isTableValid = checkTableValidations();
 
-    if (isTableValid) {
-      console.log('Table is valid');
+    if (isTableValid && material.trim() !== '') {
+      console.log('الرجاء إدخال اسم المادة');
     } else {
-      console.log('Invalid data present');
+      console.log('القيمة المدخلة خاطئة');
     }
   };
+
 
   return (
     <Box
@@ -85,14 +97,18 @@ const DoctorHomePage = () => {
           }}>اسم المادة</Typography>
           <TextField
             fullWidth
+            placeholder='اسم المادة'
             variant="outlined"
-          // value={material}
+            value={material}
+            onChange={(e) => handleMaterialChange(e.target.value)}
+            error={material.trim() === ''}
+            helperText={material.trim() === '' ? 'الرجاء إدخال اسم المادة' : ''}
           />
         </Box>
         <MainButton
           title={'إدخال علامات الطلاب'}
-          width='200px'
-          backgroundColor='#6C63FF'
+          width="200px"
+          backgroundColor="#6C63FF"
           onClick={handleMainButtonClick}
         />
       </Box>

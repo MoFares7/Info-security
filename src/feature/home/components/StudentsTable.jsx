@@ -59,6 +59,7 @@ const StudentTable = ({ students, handleDegreeChange }) => {
                                                                 <TextField
                                                                         name="marks"
                                                                         fullWidth
+                                                                        placeholder='الدرجة المستحقة'
                                                                         variant="outlined"
                                                                         value={student.degree}
                                                                         onChange={(e) => handleDegreeChange(student.id, e.target.value)}
