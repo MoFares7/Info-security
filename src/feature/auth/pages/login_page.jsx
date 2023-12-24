@@ -1,9 +1,9 @@
 import React from "react";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { Paper, Box, Grid } from "@mui/material";
-import background from "../../assets/images/F7dPYn.jpg";
-import loginside from "../../assets/images/loginside.png";
-import Login from "../../compomets/login";
+import background from "../../../assets/images/F7dPYn.jpg";
+import loginside from "../../../assets/images/loginside.png";
+import Login from "../components/login";
 const defaultTheme = createTheme();
 function LoginPage() {
   return (
@@ -16,7 +16,7 @@ function LoginPage() {
           minHeight: "100%",
           backgroundSize: "cover",
           backgroundColor: "#1bbd7e",
-          padding:20,
+          padding: 20,
         }}
       >
         <Grid
@@ -34,7 +34,7 @@ function LoginPage() {
                 padding: 8,
               }}
             >
-              <Login></Login>
+              <Login />
             </Paper>
           </Grid>
           <Grid

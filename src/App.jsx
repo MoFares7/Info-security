@@ -5,7 +5,6 @@ import theme from './utils/theme';
 import '@fontsource/cairo/400.css';
 import RouteApp from './routes/RouteApp';
 import { BrowserRouter } from 'react-router-dom';
-import LoginPage from './pages/AuthPages/login_page';
 
 function App() {
 

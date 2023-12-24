@@ -1,4 +1,3 @@
-// theme.js
 import { createTheme } from '@mui/material/styles';
 
 const theme = createTheme({
@@ -7,13 +6,19 @@ const theme = createTheme({
       main: '#3f51b5',
     },
     secondary: {
-      main: '#f50057', 
+      main: '#f50057',
     },
-    h1: {
-      fontFamily: 'Cairo, sans-serif',
-    },
-    typography: {
-      fontFamily: 'Cairo, sans-serif',
+  },
+  typography: {
+    fontFamily: 'Cairo, sans-serif',
+  },
+  components: {
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          fontFamily: 'Cairo, sans-serif',
+        },
+      },
     },
   },
 });
