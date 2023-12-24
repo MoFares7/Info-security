@@ -1,24 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, TextField } from '@mui/material';
 
-const StudentTable = () => {
-        const [students, setStudents] = useState([
-                { id: 1, name: 'محمد فارس الدباس', degree: '' },
-                { id: 2, name: 'علاء زامل', degree: '' },
-                { id: 3, name: 'مرام منصور', material: '', degree: '' },
-                { id: 4, name: 'شام الدباس', degree: '' },
-                { id: 5, name: 'ابو عبدو', degree: '' },
-        
-        ]);
-
-        const handleDegreeChange = (id, value) => {
-                setStudents((prevStudents) =>
-                        prevStudents.map((student) =>
-                                student.id === id ? { ...student, degree: value } : student
-                        )
-                );
-        };
-
+const StudentTable = ({ students, handleDegreeChange }) => {
         return (
                 <TableContainer component={Paper}>
                         <Table>
@@ -49,11 +32,9 @@ const StudentTable = () => {
                                                 >
                                                         الدرجة
                                                 </TableCell>
-
                                         </TableRow>
                                 </TableHead>
                                 <TableBody>
-
                                         {students.map((student) => (
                                                 <TableRow key={student.id}>
                                                         <TableCell
@@ -76,17 +57,17 @@ const StudentTable = () => {
                                                                 }}
                                                         >
                                                                 <TextField
+                                                                        name="marks"
                                                                         fullWidth
                                                                         variant="outlined"
                                                                         value={student.degree}
                                                                         onChange={(e) => handleDegreeChange(student.id, e.target.value)}
+                                                                        error={!student.isValidDegree}
+                                                                        helperText={!student.isValidDegree ? 'يرجى إضافة علامة للطالب' : ''}
                                                                 />
                                                         </TableCell>
-
                                                 </TableRow>
-
                                         ))}
-                                   
                                 </TableBody>
                         </Table>
                 </TableContainer>
